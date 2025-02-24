@@ -1,0 +1,299 @@
+@font-face {
+    font-family: poppins-regular;
+    src: url(./fonts-style/poppins/Poppins-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: poppins-regular;
+    scroll-behavior: smooth;
+}
+
+.main-container{
+    background-color: rgb(33, 223, 230);
+    margin: 0;
+    padding-top: 50px;
+}
+/* Common Selector */
+.box-shadow{
+    box-shadow: 3px 3px 8px black;
+}
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+.container:not(#header-section .container){
+    padding: 10px;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#aboutme-section, #my-skills,
+#my-works, #contact-me,
+#footer-section{
+    margin-top: 50px;
+}
+
+/* Header Section*/
+#header-section .container{
+    background-color:  #9a7d0a;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#header-section .container:first-child{
+    flex-basis: 40%;
+    align-items: center;
+    text-align: center;
+
+}
+#header-section .container:last-child{
+    flex-basis: 60%;
+}
+#header-section .container img{
+    width: 100%;
+}
+#header-section:first-child h1,
+#header-section:first-child h4{
+    line-height: 35px;
+}
+#header-section:first-child p{
+    margin: 3px 20px 5px 5px;
+}
+#header-section:first-child a{
+    margin: 10px;
+    font-size: 25px;
+}
+.icons .fa-youtube{
+    color: red;
+}
+.icons .fa-instagram{
+    color: rgb(243, 103, 126);
+}
+.icons .fa-facebook{
+    color: blue;
+}
+
+/* About Me Section */
+#aboutme-section .container{
+    align-items: center;
+}
+#aboutme-section div{
+    flex-basis: 50%;
+}
+#aboutme-section .container .image-div img{
+    width: 200px;
+    border-radius: 20%;
+    margin: auto;
+    display: block;
+}
+#aboutme-section .container h2{
+    line-height: 40px;
+}
+
+/* My Skills */
+#my-skills .container{
+    align-items: center;
+}
+#my-skills .container > div{
+    flex-basis: 50%;
+}
+#my-skills .content ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+#my-skills .content ul li{
+    display: inline-block;
+    background-color: rgba( 186, 182, 167, 0.7);
+    padding: 5px 30px;
+    margin: 5px 5px 5px 0;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#my-skills .image-div img{
+    width: 350px;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* My Works */
+#my-works .container{
+    justify-content: space-between;
+}
+#my-works .card{
+    width: 30%;
+    padding: 20px 15px;
+    text-align: center;
+    background-color: #9a7d0a;
+    border-radius: 5px;
+}
+#my-works .card h2{
+    margin: 10px 0;
+}
+#my-works .card div{
+    font-size: 25px;
+}
+
+/* Contact Me */
+#contact-me .container div{
+    flex-basis: 50%;
+}
+#contact-me .info ul{
+    list-style: none;
+    line-height: 40px;
+}
+#contact-me .info ul li i{
+    margin-right: 10px;
+}
+#contact-me .form textarea,
+#contact-me .form div input{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(238, 243, 243, 0.8);
+    border: none;
+}
+#contact-me .form textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+}
+#contact-me .form div{
+    display: flex;
+    justify-content: space-between;
+}
+#contact-me .form div input{
+    flex-basis: 49%;
+}
+#contact-me .form button{
+    padding: 5px 30px;
+    border: none;
+    border-radius:5px;
+    background-color: #9a7d0a;
+    float: right;
+    margin-top: 3px;
+}
+
+/* Footer Section */
+#footer-section{
+    background-color:  #9a7d0a;
+    padding: 20px 0 90px 0;
+}
+#footer-section .container{
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+}
+#footer-section .container .column{
+    flex-basis: 32%;
+    color: #fff;
+    text-align: center;
+}
+#footer-section .column {
+    line-height: 25px;
+}
+#footer-section .column h2{
+    margin-bottom: 20px;
+}
+#footer-section .column ul{
+    list-style: none;
+}
+#footer-section .column ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#footer-section .column .icons a{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+
+
+
+
+/* Responsive Website */
+@media (max-width:576px){
+
+    /* Header Section*/
+    #header-section .container{
+        flex-direction: column-reverse;
+    } 
+    #header-section .container{
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    #header-section .container:first-child h1,
+    #header-section .container:first-child p{
+        margin: 10px;
+    }
+    #header-section .icons{
+        padding-bottom: 20px;
+    }
+    #header-section .container:last-child{
+        padding: 0;
+    }
+
+    /* About Me Section */
+    #aboutme-section .container{
+        flex-direction: column;
+    }
+    #aboutme-section .container h2{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* My Skills*/
+    #my-skills .container{
+        flex-direction: column-reverse;
+    }
+    #my-skills .content{
+        text-align: center;
+    }
+    #my-skills .image-div{
+        margin: 20px 0;
+    }
+
+    /* My Works */
+    #my-works .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #my-works .card{
+        width: 90%;
+        padding: 20px 15px;
+        text-align: center;
+        background-color: #9a7d0a;
+        border-radius: 5px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    /* Contact Me */
+    #contact-me .container{
+        flex-direction: column;
+        margin: 5px 10px;
+        text-align: center;
+    }
+    #contact-me .form div{
+        display: block;
+    }
+    #contact-me .form div input{
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    /* Footer Section */
+    #footer-section .container{
+        flex-direction: column;
+    }
+    #footer-section .container .column{
+        margin-bottom: 20px;
+    }
+    #footer-section .column h2{
+    margin-bottom: 10px;
+    }
+}
